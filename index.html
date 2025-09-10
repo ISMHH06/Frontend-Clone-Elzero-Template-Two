@@ -7,7 +7,7 @@
   <title>Template Two</title>
   <link rel="stylesheet" href="css/normalize.css" />
   <link rel="stylesheet" href="css/all.min.css" />
-   <link rel="stylesheet" href="css\style.css" />
+  <link rel="stylesheet" href="css\style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -20,8 +20,8 @@
     <div class="container">
       <img src="images/logo.png" alt="logo" />
       <nav>
+        <i class="fas fa-bars menu"></i>
         <ul>
-          <i class="fas fa-bars toggle-menu"></i>
           <li><a class="active" href="#">Home</a></li>
           <li><a href="#Services">Services</a></li>
           <li><a href="#Portfolio">Portfolio</a></li>
@@ -34,15 +34,26 @@
     </div>
   </header>
   <section class="landing">
-    <div class="text">
-      <h1>Hello World! We Are Kasper We Make Art.</h1>
-      <p>
-        Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
-        Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur
-        aliquet quam. Accumsan id imperdiet et, porttitor at sem. Mauris
-        blandit aliquet elit, eget tincidunt.
-      </p>
+    <div class="overlay">
+      <div class="text">
+        <div class="content">
+          <h2>Hello World! <br>We Are Kasper We Make Art.</h2>
+          <p>
+            Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
+            Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur
+            aliquet quam. Accumsan id imperdiet et, porttitor at sem. Mauris
+            blandit aliquet elit, eget tincidunt.
+          </p>
+        </div>
+      </div>
     </div>
+    <i class="fas fa-angle-left change-background fa-2x"></i>
+    <i class="fas fa-angle-right change-background fa-2x"></i>
+    <ul class="bullets">
+      <li></li>
+      <li class="active"></li>
+      <li></li>
+    </ul>
   </section>
   <section class="Services" id="Services">
     <div class="container">
