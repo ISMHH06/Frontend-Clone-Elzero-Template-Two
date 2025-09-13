@@ -1,6 +1,8 @@
 :root {
   --main-color: #19c8fa;
   --second-color: rgb(15 116 143 / 0.7);
+  --third-color: #777;
+  --main-section-padding: 100px;
 }
 
 * {
@@ -34,6 +36,50 @@ body {
 
 ul {
   list-style: none;
+}
+
+.main-heading {
+  text-align: center;
+}
+
+.main-heading h2{
+  font-size: 40px;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin-bottom: 70px;
+  position: relative;
+}
+
+.main-heading h2::before {
+  content: "";
+  width: 120px;
+  height: 1.5px;
+  background-color: black;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -25px;
+}
+
+.main-heading h2::after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  border: 2px solid black;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -33px;
+}
+
+.main-heading h2 + p{
+  margin: 0 auto 100px;
+  font-size: 16px;
+  max-width: 600px;
+  line-height: 2;
+  color: var(--third-color);
 }
 
 @media (min-width: 768px) {
@@ -120,7 +166,7 @@ header .container nav ul {
     top: 97px;
     left: 0;
     width: 100vw;
-    background-color: rgba(0, 0, 0, 0.493);
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 1000;
   }
 
@@ -258,4 +304,286 @@ header .container nav div:last-child {
   .landing .change-background {
     display: none;
   }
+}
+
+.Services {
+  padding-top: var(--main-section-padding);
+  padding-bottom: var(--main-section-padding);
+}
+
+.Services .container > div.box-services {
+  gap: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-rows: auto;
+}
+
+.Services .container > div.box-services > div {
+  display: flex;
+  gap: 50px;
+}
+
+@media (max-width: 767px) {
+  .Services .container > div.box-services > div {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 25px;
+  }
+}
+
+.Services .container > div.box-services > div h3 {
+  font-size: 20px;
+  margin-bottom: 30px;
+  color: var(--main-color);
+}
+
+.Services .container > div.box-services > div p {
+  font-size: 16px;
+  line-height: 2;
+  color: var(--third-color);
+}
+
+.design1 {
+  background-color: blue;
+  background-image: url("../images/design-features.jpg");
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+}
+
+.design1 .overlay {
+  padding-top: var(--main-section-padding);
+  padding-bottom: var(--main-section-padding);
+  background-color: rgba(0, 0, 0, 0.5);
+  position: relative;
+  min-height: 550px;
+}
+
+.design1 .img {
+  position: absolute;
+  bottom: -60px;
+  left: 0;
+  width: 300px;
+  margin-left: 13%;
+}
+
+@media (max-width: 991px) {
+  .design1 .img {
+    margin-left: 8%;
+  }
+}
+
+.design1 .img img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .design1 .img {
+    display: none;
+  }
+}
+
+.design1 .text {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
+  color: white;
+  width: 50%;
+  background-color: var(--second-color);
+  padding: 50px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+@media (max-width: 767px) {
+  .design1 .text {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+.design1 .text .content {
+  max-width: 500px;
+}
+
+.design1 .text .content h2 {
+  font-size: 25px;
+  font-weight: normal;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+}
+
+.design1 .text .content div {
+  margin-bottom: 15px;
+}
+
+.design1 .text .content div div{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.design1 .text .content div i {
+  font-size: 20px;
+  line-height: 2;
+}
+
+.design1 .text .content div h3 {
+  font-weight: normal;
+}
+
+.Portfolio {
+  padding-top: var(--main-section-padding);
+  padding-bottom: var(--main-section-padding);
+}
+
+.Portfolio .shuffle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 70px;
+}
+
+.Portfolio .shuffle li.active {
+  background-color: var(--main-color);
+  color: white;
+  padding: 9px;
+}
+
+.Portfolio .box-portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 1px;
+  row-gap: 5px;
+}
+
+.Portfolio .box-portfolio > div {
+  overflow: hidden;
+  position: relative;
+}
+
+.Portfolio .box-portfolio > div:hover img {
+  transform: rotate(3deg) scale(1.1);
+}
+
+.Portfolio .box-portfolio > div:hover .caption {
+  bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .Portfolio .box-portfolio > div {
+    width: calc(50% - 1px);
+  }
+}
+
+@media (min-width: 1199px) {
+  .Portfolio .box-portfolio > div {
+    width: calc(25% - 1px);
+  }
+}
+
+.Portfolio .box-portfolio > div  img {
+  max-width: 100%;
+  transition: 0.5s;
+}
+
+.Portfolio .box-portfolio > div .caption {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  background-color: white;
+  width: 100%;
+  padding: 20px;
+  transition: 0.5s;
+}
+
+.Portfolio .box-portfolio > div .caption h4 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.Portfolio .box-portfolio > div .caption p {
+  color: var(--main-color);
+}
+
+.Portfolio .More {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  background-color: var(--main-color);
+  padding: 15px 20px;
+  margin: 20px auto;
+  display: block;
+  width: fit-content;
+}
+
+.design2 {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.design2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.design2 video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.design2 .text {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translate(0, -50%);
+  color: white;
+  width: 100%;
+  background-color: var(--second-color);
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+}
+
+.design2 .text .content {
+  text-align: center;
+}
+
+.design2 .text .content h2 {
+  font-size: 25px;
+  font-weight: normal;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.design2 .text .content p {
+  font-size: 16px;
+  line-height: 2;
+  margin-bottom: 30px;
+}
+
+.design2 .text .content .More {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  background-color: black;
+  padding: 10px 20px;
+}
+
+.About {
+  padding-top: var(--main-section-padding);
+  padding-bottom: var(--main-section-padding);
 }
