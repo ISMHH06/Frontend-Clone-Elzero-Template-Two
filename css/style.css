@@ -42,7 +42,7 @@ ul {
   text-align: center;
 }
 
-.main-heading h2{
+.main-heading h2 {
   font-size: 40px;
   font-weight: normal;
   text-transform: uppercase;
@@ -74,7 +74,7 @@ ul {
   bottom: -33px;
 }
 
-.main-heading h2 + p{
+.main-heading h2+p {
   margin: 0 auto 100px;
   font-size: 16px;
   max-width: 600px;
@@ -280,14 +280,16 @@ header .container nav div:last-child {
   transform: translateX(-50%);
   display: flex;
 }
-.landing .bullets li{
+
+.landing .bullets li {
   width: 20px;
   border: 1px solid white;
   height: 20px;
   border-radius: 50%;
   margin-left: 10px;
 }
-.landing .bullets li.active{
+
+.landing .bullets li.active {
   background-color: var(--main-color);
   border: 1px solid var(--main-color);
 }
@@ -297,6 +299,7 @@ header .container nav div:last-child {
     width: 100%;
     justify-content: flex-start;
   }
+
   .landing .text .content {
     max-width: 100%;
   }
@@ -311,20 +314,20 @@ header .container nav div:last-child {
   padding-bottom: var(--main-section-padding);
 }
 
-.Services .container > div.box-services {
+.Services .container>div.box-services {
   gap: 50px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   grid-template-rows: auto;
 }
 
-.Services .container > div.box-services > div {
+.Services .container>div.box-services>div {
   display: flex;
   gap: 50px;
 }
 
 @media (max-width: 767px) {
-  .Services .container > div.box-services > div {
+  .Services .container>div.box-services>div {
     flex-direction: column;
     text-align: center;
     align-items: center;
@@ -332,13 +335,13 @@ header .container nav div:last-child {
   }
 }
 
-.Services .container > div.box-services > div h3 {
+.Services .container>div.box-services>div h3 {
   font-size: 20px;
   margin-bottom: 30px;
   color: var(--main-color);
 }
 
-.Services .container > div.box-services > div p {
+.Services .container>div.box-services>div p {
   font-size: 16px;
   line-height: 2;
   color: var(--third-color);
@@ -374,7 +377,7 @@ header .container nav div:last-child {
   }
 }
 
-.design1 .img img{
+.design1 .img img {
   width: 100%;
   height: auto;
   display: block;
@@ -421,7 +424,7 @@ header .container nav div:last-child {
   margin-bottom: 15px;
 }
 
-.design1 .text .content div div{
+.design1 .text .content div div {
   display: flex;
   align-items: center;
   gap: 20px;
@@ -462,37 +465,37 @@ header .container nav div:last-child {
   row-gap: 5px;
 }
 
-.Portfolio .box-portfolio > div {
+.Portfolio .box-portfolio>div {
   overflow: hidden;
   position: relative;
 }
 
-.Portfolio .box-portfolio > div:hover img {
+.Portfolio .box-portfolio>div:hover img {
   transform: rotate(3deg) scale(1.1);
 }
 
-.Portfolio .box-portfolio > div:hover .caption {
+.Portfolio .box-portfolio>div:hover .caption {
   bottom: 0;
 }
 
 @media (min-width: 768px) {
-  .Portfolio .box-portfolio > div {
+  .Portfolio .box-portfolio>div {
     width: calc(50% - 1px);
   }
 }
 
 @media (min-width: 1199px) {
-  .Portfolio .box-portfolio > div {
+  .Portfolio .box-portfolio>div {
     width: calc(25% - 1px);
   }
 }
 
-.Portfolio .box-portfolio > div  img {
+.Portfolio .box-portfolio>div img {
   max-width: 100%;
   transition: 0.5s;
 }
 
-.Portfolio .box-portfolio > div .caption {
+.Portfolio .box-portfolio>div .caption {
   position: absolute;
   bottom: -100%;
   left: 0;
@@ -502,12 +505,12 @@ header .container nav div:last-child {
   transition: 0.5s;
 }
 
-.Portfolio .box-portfolio > div .caption h4 {
+.Portfolio .box-portfolio>div .caption h4 {
   font-weight: bold;
   margin-bottom: 10px;
 }
 
-.Portfolio .box-portfolio > div .caption p {
+.Portfolio .box-portfolio>div .caption p {
   color: var(--main-color);
 }
 
@@ -543,6 +546,7 @@ header .container nav div:last-child {
   width: 100%;
   height: 100%;
 }
+
 .design2 .text {
   position: absolute;
   top: 50%;
@@ -585,5 +589,271 @@ header .container nav div:last-child {
 
 .About {
   padding-top: var(--main-section-padding);
+  overflow: hidden;
+  text-align: center;
+}
+
+.About img {
+  position: relative;
+  bottom: -120px;
+  margin-top: -120px;
+  max-width: 100%;
+}
+
+@media (max-width: 767px) {
+  .About img {
+    bottom: -60px;
+    margin-top: -60px;
+  }
+}
+
+.stats {
+  padding-top: var(--main-section-padding);
   padding-bottom: var(--main-section-padding);
+  background-image: url("../images/stats.png");
+  background-size: cover;
+  position: relative;
+}
+
+.stats::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.stats .content {
+  color: white;
+  background-color: var(--second-color);
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 10px;
+  position: relative;
+  margin: auto;
+}
+
+.stats .content div {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+}
+
+@media (min-width: 992px) {
+  .stats .content div {
+    flex-basis: 25%;
+  }
+}
+
+@media (max-width: 991px) {
+  .stats .content div {
+    flex-basis: 50%;
+  }
+}
+
+@media (max-width: 767px) {
+  .stats .content div {
+    flex-basis: 100%;
+  }
+}
+
+.stats .content div i {
+  margin-bottom: 15px;
+  background-color: black;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stats .content div h3 {
+  font-size: 50px;
+  font-weight: bold;
+  margin: 0 0 20px;
+}
+
+.stats .content div p {
+  font-size: 14px;
+}
+
+.skills {
+  padding-top: var(--main-section-padding);
+  padding-bottom: var(--main-section-padding);
+}
+
+.skills .container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.skills .container .Testimonials {
+  position: relative;
+}
+
+.skills .container>div {
+  flex-basis: 45%;
+}
+
+
+@media (max-width: 991px) {
+  .skills .container>div {
+    flex-basis: 100%;
+    margin-bottom: 80px;
+  }
+}
+
+.skills .container>div>div:first-child {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.skills .container>div>div:first-child h3 {
+  font-weight: normal;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin: 0 0 30px;
+}
+
+.skills .container>div>div:first-child p {
+  color: var(--third-color);
+}
+
+.skills .container .Testimonials .box-testimonials .first-box,
+.skills .container .Testimonials .box-testimonials .second-box {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 767px) {
+
+  .skills .container .Testimonials .box-testimonials .first-box,
+  .skills .container .Testimonials .box-testimonials .second-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+}
+
+.skills .container .Testimonials .box-testimonials .first-box img,
+.skills .container .Testimonials .box-testimonials .second-box img {
+  border-radius: 50%;
+  margin-right: 40px;
+  height: 100px;
+  width: 100px;
+}
+
+@media (max-width: 767px) {
+
+  .skills .container .Testimonials .box-testimonials .first-box img,
+  .skills .container .Testimonials .box-testimonials .second-box img {
+    margin: 0 auto 15px;
+  }
+}
+
+.skills .container .Testimonials .box-testimonials .first-box div::after,
+.skills .container .Testimonials .box-testimonials .second-box div::after {
+  position: relative;
+}
+
+.skills .container .Testimonials .box-testimonials .first-box div::after,
+.skills .container .Testimonials .box-testimonials .second-box div::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: var(--third-color);
+  display: block;
+  margin: 15px 0;
+}
+
+.skills .container .Testimonials .box-testimonials .first-box div p,
+.skills .container .Testimonials .box-testimonials .second-box div p {
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.skills .container .Testimonials .box-testimonials .first-box div h4,
+.skills .container .Testimonials .box-testimonials .second-box div h4 {
+  color: var(--third-color);
+  text-align: end;
+  font-weight: normal;
+}
+
+.skills .container .Testimonials .bullets {
+  position: absolute;
+  bottom: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.skills .container .Testimonials .bullets li {
+  width: 15px;
+  border: 1px solid var(--third-color);
+  height: 15px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.skills .container .Testimonials .bullets li.active {
+  background-color: var(--main-color);
+  border: 1px solid var(--main-color);
+}
+
+.skills .container .our-skills>div:not(:first-child) {
+  margin-bottom: 40px;
+}
+
+.skills .container .our-skills>div:not(:first-child) h4 {
+  font-weight: normal;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.skills .container .our-skills>div:not(:first-child)>div {
+  background-color: #dedadc;
+  height: 30px;
+  position: relative;
+}
+
+.skills .container .our-skills>div:not(:first-child)>div span {
+  background-color: var(--main-color);
+  height: 100%;
+  display: block;
+  position: relative;
+}
+
+.skills .container .our-skills>div:not(:first-child)>div span::before {
+  content: attr(data-progress);
+  position: absolute;
+  background-color: black;
+  color: white;
+  top: -40px;
+  right: -18px;
+  padding: 4px 0;
+  width: 40px;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.skills .container .our-skills>div:not(:first-child)>div span::after {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-width: 8px;
+  border-color: black transparent transparent;
+  right: -8px;
+  top: -15px;
 }
