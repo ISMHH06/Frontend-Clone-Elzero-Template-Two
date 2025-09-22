@@ -18,7 +18,7 @@ html {
 }
 
 body {
-  font-family: "Work Sans", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 html,
@@ -856,4 +856,256 @@ header .container nav div:last-child {
   border-color: black transparent transparent;
   right: -8px;
   top: -15px;
+}
+
+.design3 {
+  height: 300px;
+  width: 100%;
+  position: relative;
+}
+
+.design3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.design3 img {
+  width: 100%;
+  max-height: 300px;
+  overflow: hidden;
+}
+
+.design3 .qoute {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translate(0, -50%);
+  color: white;
+  max-width: 1300px;
+  padding: 50px;
+  text-align: center;
+  z-index: 2;
+  margin: auto;
+}
+
+.design3 .qoute p {
+  font-size: 30px;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.design3 .qoute h4 {
+  font-weight: normal;
+}
+
+.pricing {
+  padding-top: var(--main-section-padding);
+  padding-bottom: var(--main-section-padding);
+}
+
+.pricing .container .pricing-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.pricing .container .pricing-container>div {
+  background-color: #cccccc18;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.pricing .container .pricing-container>div:hover {
+  transform: translateY(-10px);
+}
+
+.pricing .container .pricing-container>div .head {
+  padding: 40px 20px;
+  border-top: 1px solid var(--main-color);
+  border-bottom: 1px solid var(--main-color);
+}
+
+.pricing .container .pricing-container>div .head h3 {
+  font-weight: normal;
+  text-transform: uppercase;
+  margin: 0 0 20px;
+}
+
+.pricing .container .pricing-container>div .head span {
+  font-size: 60px;
+  font-weight: bold;
+  padding: 20px 60px;
+  position: relative;
+}
+
+.pricing .container .pricing-container>div .head span::before {
+  content: "$";
+  position: absolute;
+  font-weight: normal;
+  left: 28px;
+  top: 18px;
+  font-size: 25px;
+}
+
+.pricing .container .pricing-container>div .head span::after {
+  content: "/Mo";
+  position: absolute;
+  right: 10px;
+  bottom: 30px;
+  font-size: 20px;
+}
+
+.pricing .container .pricing-container>div ul {
+  border-bottom: 1px solid var(--main-color);
+}
+
+.pricing .container .pricing-container>div ul li {
+  padding: 20px;
+  position: relative;
+}
+
+.pricing .container .pricing-container>div ul li:not(:last-child) {
+  width: fit-content;
+  border-bottom: 1px solid var(--main-color);
+  margin: 0 auto;
+}
+
+/* .pricing .container .pricing-container>div ul li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  height: 2px;
+  width: 58%;
+  background-color: var(--main-color);
+} */
+
+.pricing .container .pricing-container>div .foot a {
+  text-decoration: none;
+  border: 1px solid var(--main-color);
+  padding: 20px 20px;
+  margin: 20px auto;
+  display: block;
+  width: fit-content;
+}
+
+.pricing .container .pricing-container>div .foot a:hover {
+  background-color: var(--main-color);
+  color: white;
+}
+
+.pricing .container > div:last-child {
+  text-align: center;
+  margin: 50px auto 10px;
+  font-size: 20px;
+}
+
+.pricing .container > div:last-child p {
+  margin-bottom: 20px;
+}
+
+.pricing .container > div:last-child a {
+  text-decoration: none;
+  background-color: var(--main-color);
+  padding: 15px 20px;
+  color: white;
+  display: block;
+  width: fit-content;
+  margin: auto;
+}
+
+.design4 {
+  height: 300px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.design4::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.design4 img {
+  width: 100%;
+  overflow: hidden;
+}
+
+.design4 .container {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translate(0, -50%);
+  color: white;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+
+@media (max-width: 991px) {
+  .design4 .container {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+}
+
+.design4 .container form {
+  display: flex;
+  align-items: center;
+  border: 1px solid white;
+  width: 500px;
+  max-width: 100%;
+}
+
+.design4 .container form i{
+  margin: 10px 10px 10px 20px;
+}
+
+.design4 .container form input[type="email"] {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  caret-color: var(--main-color);
+  color: white;
+  flex: 1;
+}
+
+.design4 .container form input[type="email"]::placeholder {
+  color: white;
+}
+
+.design4 .container form input[type="submit"]{
+  padding: 20px;
+  text-transform: uppercase;
+  background-color: var(--main-color);
+  color: white;
+  border: none;
+}
+
+.subscribe form input[type="email"]:focus,
+.subscribe form input[type="submit"]:focus {
+  outline: none;
+}
+
+.design4 .container > p {
+  max-width: 100%;
+  text-align: left;
+  line-height: 2;
 }
