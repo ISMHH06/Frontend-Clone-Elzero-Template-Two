@@ -1001,17 +1001,17 @@ header .container nav div:last-child {
   color: white;
 }
 
-.pricing .container > div:last-child {
+.pricing .container>div:last-child {
   text-align: center;
   margin: 50px auto 10px;
   font-size: 20px;
 }
 
-.pricing .container > div:last-child p {
+.pricing .container>div:last-child p {
   margin-bottom: 20px;
 }
 
-.pricing .container > div:last-child a {
+.pricing .container>div:last-child a {
   text-decoration: none;
   background-color: var(--main-color);
   padding: 15px 20px;
@@ -1073,7 +1073,7 @@ header .container nav div:last-child {
   max-width: 100%;
 }
 
-.design4 .container form i{
+.design4 .container form i {
   margin: 10px 10px 10px 20px;
 }
 
@@ -1091,7 +1091,7 @@ header .container nav div:last-child {
   color: white;
 }
 
-.design4 .container form input[type="submit"]{
+.design4 .container form input[type="submit"] {
   padding: 20px;
   text-transform: uppercase;
   background-color: var(--main-color);
@@ -1104,8 +1104,157 @@ header .container nav div:last-child {
   outline: none;
 }
 
-.design4 .container > p {
+.design4 .container>p {
   max-width: 100%;
   text-align: left;
   line-height: 2;
+}
+
+.Contact-Us {
+  padding-top: var(--main-section-padding);
+  padding-bottom: var(--main-section-padding);
+}
+
+.Contact-Us .container .contact-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 767px) {
+  .Contact-Us .container .contact-info {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.Contact-Us .container .contact-info form {
+  flex-basis: 70%;
+}
+
+.Contact-Us .container .contact-info form input,
+.Contact-Us .container .contact-info form textarea {
+  padding: 20px;
+  display: block;
+  margin-bottom: 30px;
+  width: 100%;
+  border: 1px solid #ccc;
+}
+
+.Contact-Us .container .contact-info form input:focus,
+.Contact-Us .container .contact-info form textarea:focus {
+  outline: none;
+}
+
+.Contact-Us .container .contact-info form textarea {
+  height: 200px;
+}
+
+.Contact-Us .container .contact-info form input[type="submit"] {
+  background-color: var(--main-color);
+  color: white;
+  border: none;
+  width: fit-content;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin: 0 0 0 auto;
+}
+
+.Contact-Us .container .contact-info .info {
+  flex-basis: 25%;
+}
+
+@media (max-width: 767px) {
+  .Contact-Us .container .contact-info .info {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 40px;
+    order: -1;
+  }
+}
+
+.Contact-Us .container .contact-info .info h4 {
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.Contact-Us .container .contact-info .info>div:first-child span {
+  color: var(--third-color);
+  display: block;
+  margin-bottom: 10px;
+}
+
+.Contact-Us .container .contact-info .info>div:last-child h4 {
+  margin-top: 90px;
+}
+
+@media (max-width: 767px) {
+  .Contact-Us .container .contact-info .info>div:last-child h4 {
+    margin-top: 0px;
+  }
+}
+
+.Contact-Us .container .contact-info .info>div:last-child address {
+  color: var(--third-color);
+  line-height: 2;
+}
+
+footer {
+
+  background-image: url("../images/subscribe.jpg");
+  background-size: cover;
+  position: relative;
+  z-index: -2;
+  height: 50vh;
+}
+
+footer::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+}
+
+footer .container {
+  z-index: 2;
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+}
+
+footer .container img {
+  width: 115px;
+}
+
+footer .container>div h3 {
+  font-size: 20px;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+footer .container>div hr {
+  height: 1px;
+  border: none;
+  background-color: white;
+  width: 200px;
+  margin: 0 auto 25px;
+}
+
+footer .container>div i:not(:first-child) {
+  margin-left: 25px;
+}
+
+footer .container p span {
+  font-weight: bold;
+  color: var(--main-color);
 }
