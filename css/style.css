@@ -25,6 +25,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 .container {
@@ -318,7 +319,12 @@ header .container nav div:last-child {
   gap: 50px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  grid-template-rows: auto;
+}
+
+@media (max-width: 767px) {
+  .Services .container>div.box-services {
+    display: block;
+  }
 }
 
 .Services .container>div.box-services>div {
@@ -331,7 +337,7 @@ header .container nav div:last-child {
     flex-direction: column;
     text-align: center;
     align-items: center;
-    gap: 25px;
+    margin-bottom: 40px;
   }
 }
 
@@ -345,6 +351,8 @@ header .container nav div:last-child {
   font-size: 16px;
   line-height: 2;
   color: var(--third-color);
+  max-width: 100%;
+  word-break: break-word;
 }
 
 .design1 {
@@ -799,6 +807,12 @@ header .container nav div:last-child {
   display: flex;
 }
 
+@media (max-width: 991px) {
+  .skills .container .Testimonials .bullets {
+    bottom: -25px;
+  }
+}
+
 .skills .container .Testimonials .bullets li {
   width: 15px;
   border: 1px solid var(--third-color);
@@ -859,9 +873,14 @@ header .container nav div:last-child {
 }
 
 .design3 {
-  height: 300px;
+  height: auto;
   width: 100%;
   position: relative;
+  background-image: url("../images/quote.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .design3::after {
@@ -874,23 +893,16 @@ header .container nav div:last-child {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-.design3 img {
-  width: 100%;
-  max-height: 300px;
-  overflow: hidden;
+.design3 .container {
+  position: relative;
+  z-index: 3;
 }
 
 .design3 .qoute {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  transform: translate(0, -50%);
   color: white;
-  max-width: 1300px;
-  padding: 50px;
+  max-width: 100%;
+  padding: 100px 30px;
   text-align: center;
-  z-index: 2;
   margin: auto;
 }
 
@@ -1022,10 +1034,16 @@ header .container nav div:last-child {
 }
 
 .design4 {
-  height: 300px;
-  width: 100%;
+  padding-top: var(--main-section-padding);
+  padding-bottom: var(--main-section-padding);
   overflow: hidden;
   position: relative;
+  background-image: url("../images/subscribe.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
 }
 
 .design4::after {
@@ -1036,21 +1054,13 @@ header .container nav div:last-child {
   height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.7);
-}
-
-.design4 img {
-  width: 100%;
-  overflow: hidden;
+  z-index: -1;
 }
 
 .design4 .container {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  transform: translate(0, -50%);
   color: white;
-  z-index: 2;
+  z-index: 1;
+  max-width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1069,12 +1079,12 @@ header .container nav div:last-child {
   display: flex;
   align-items: center;
   border: 1px solid white;
-  width: 500px;
   max-width: 100%;
+  position: relative;
 }
 
 .design4 .container form i {
-  margin: 10px 10px 10px 20px;
+  margin: 10px 20px;
 }
 
 .design4 .container form input[type="email"] {
@@ -1084,7 +1094,7 @@ header .container nav div:last-child {
   outline: none;
   caret-color: var(--main-color);
   color: white;
-  flex: 1;
+  width: 100%;
 }
 
 .design4 .container form input[type="email"]::placeholder {
@@ -1097,6 +1107,7 @@ header .container nav div:last-child {
   background-color: var(--main-color);
   color: white;
   border: none;
+  max-width: 100%;
 }
 
 .subscribe form input[type="email"]:focus,
